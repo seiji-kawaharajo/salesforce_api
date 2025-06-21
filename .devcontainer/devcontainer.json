@@ -1,0 +1,45 @@
+{
+  "build": {
+    "args": {
+      "DEBIAN_VERSION": "bookworm"
+    },
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Python開発
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.mypy-type-checker",
+        "charliermarsh.ruff",
+        "njpwerner.autodocstring",
+
+        // ファイル形式・フォーマット
+        "esbenp.prettier-vscode",
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+
+        // Docker・コンテナ
+        "ms-azuretools.vscode-docker",
+        "exiasr.hadolint",
+        "anysphere.remote-containers",
+
+        // UI・テーマ
+        "PKief.material-icon-theme",
+        "oderwat.indent-rainbow"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "name": "rye project",
+  "postCreateCommand": "rye pin 3.13 && rye sync && npm i",
+  "remoteUser": "vscode"
+}

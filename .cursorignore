@@ -1,0 +1,42 @@
+# 機密情報ファイル
+secrets.json
+secrets.*.json
+.secrets.json
+.secrets.*.json
+config.json
+config.*.json
+.config.json
+.config.*.json
+credentials.json
+credentials.*.json
+.credentials.json
+.credentials.*.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# 環境変数ファイル
+.env
+.env.*
+
+# ログファイル
+*.log
+
+# キャッシュファイル
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+
+# 仮想環境
+.venv/
+venv/
+
+# Node.js
+node_modules/
+
+# ビルド成果物
+build/
+dist/
+*.egg-info/

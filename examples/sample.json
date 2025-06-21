@@ -1,0 +1,6 @@
+{
+  "domain": "test",
+  "password": "your_actual_sandbox_password_set",
+  "security_token": "your_actual_sandbox_security_token_set",
+  "username": "your_sandbox_username_set1@example.com.sandbox"
+}

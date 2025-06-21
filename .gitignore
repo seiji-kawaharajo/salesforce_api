@@ -1,0 +1,52 @@
+# Python generated files and caches
+__pycache__/
+*.py[co]
+*.pyd
+*.so
+build/
+dist/
+wheels/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+
+# Virtual environments
+.venv/
+
+# Node.js and npm specific
+/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/ # pnpmを使っている場合
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# Testing artifacts
+.coverage # カバレッジデータファイル (pytest-covが生成)
+coverage.xml # XML形式のカバレッジレポート (CI/CDで使われることも)
+
+# 機密情報ファイル
+secrets.json
+secrets.*.json
+.secrets.json
+.secrets.*.json
+config.json
+config.*.json
+.config.json
+.config.*.json
+credentials.json
+credentials.*.json
+.credentials.json
+.credentials.*.json
+*.key
+*.pem
+*.p12
+*.pfx
