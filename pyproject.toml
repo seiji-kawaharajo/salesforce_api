@@ -39,6 +39,7 @@ include = ["src/salesforce_api/py.typed"]
 
 [tool.rye.scripts]
 layer-build = "./scripts/build_layer.sh"
+hadolint = "./scripts/run-hadolint.sh"
 
 [tool.uv]
 link-mode = "copy"

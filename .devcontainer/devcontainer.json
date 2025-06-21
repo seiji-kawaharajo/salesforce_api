@@ -37,7 +37,8 @@
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
-    }
+    },
+    "ghcr.io/dhoeric/features/hadolint:1": {}
   },
   "name": "rye project",
   "postCreateCommand": "rye pin 3.13 && rye sync && npm i",

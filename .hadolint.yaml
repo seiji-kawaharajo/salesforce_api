@@ -1,0 +1,30 @@
+# hadolint設定ファイル
+# Dockerfileの静的解析ルールを定義
+
+# 無視するルール
+ignore:
+  # DL3008: apt-getのキャッシュクリアを推奨
+  - DL3008
+  # DL3009: apt-getの--no-install-recommendsフラグを推奨
+  - DL3009
+  # DL3018: apt-getの--no-cache-dirフラグを推奨
+  - DL3018
+  # DL3028: 特定のタグを使用することを推奨
+  - DL3028
+  # DL4006: 特定のベースイメージを使用することを推奨
+  - DL4006
+
+# 設定
+config:
+  # 厳格度レベル (error, warning, info, style)
+  strict: true
+  # 無効にするルール
+  disabled:
+    - DL3008
+    - DL3009
+    - DL3018
+    - DL3028
+    - DL4006
+
+# 出力形式
+format: tty
