@@ -41,6 +41,6 @@
     "ghcr.io/dhoeric/features/hadolint:1": {}
   },
   "name": "rye project",
-  "postCreateCommand": "rye pin 3.13 && rye sync && npm i && git config --global --add safe.directory ${containerWorkspaceFolder} && git config --global user.name 'seiji.kawaharajo' && git config --global user.email 'seiji.kawaharajo@sol-tech.co.jp'",
+  "postCreateCommand": ".devcontainer/post-create.sh",
   "remoteUser": "vscode"
 }
