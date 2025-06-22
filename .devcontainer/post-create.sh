@@ -12,10 +12,14 @@ rye sync
 echo "📦 Installing Node.js dependencies..."
 npm i
 
-# Git設定
-echo "🔧 Configuring Git..."
-git config --global --add safe.directory '*'
-git config --global user.name 'seiji.kawaharajo'
-git config --global user.email 'seiji.kawaharajo@sol-tech.co.jp'
+# Git設定（Docker Desktop環境の場合のみ）
+if [ -z "$CODESPACES" ]; then
+    echo "🔧 Configuring Git for Docker Desktop environment..."
+    git config --global --add safe.directory '*'
+    git config --global user.name 'seiji.kawaharajo'
+    git config --global user.email 'seiji.kawaharajo@sol-tech.co.jp'
+else
+    echo "📝 Skipping Git configuration (Codespaces environment detected)"
+fi
 
 echo "✅ Post-create setup completed successfully!"
