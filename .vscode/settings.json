@@ -53,6 +53,7 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.renderWhitespace": "all",
+  "extensions.ignoreRecommendations": true,
   "files.encoding": "utf8",
   "files.eol": "\n",
   "files.exclude": {

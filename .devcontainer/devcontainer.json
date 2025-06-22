@@ -26,6 +26,10 @@
         "ms-azuretools.vscode-docker",
         "anysphere.remote-containers",
 
+        // GitHub関連
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+
         // UI・テーマ
         "PKief.material-icon-theme",
         "oderwat.indent-rainbow"
