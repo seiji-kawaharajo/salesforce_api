@@ -5,7 +5,7 @@ echo "🚀 Post-create setup starting..."
 
 # Python環境の設定
 echo "📦 Setting up Python environment..."
-rye pin 3.12
+rye pin 3.13
 rye sync
 
 # Node.js依存関係のインストール

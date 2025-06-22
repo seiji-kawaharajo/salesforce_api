@@ -5,7 +5,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$( dirname "${SCRIPT_DIR}" )"
 
 # --- 設定 ---
-PYTHON_VERSION="3.12"
+PYTHON_VERSION="3.13"
 PROJECT_NAME="my-lambda-layer"
 LAYER_ZIP_NAME="${PROJECT_ROOT}/${PROJECT_NAME}.zip"
 LAYER_BUILD_DIR="${PROJECT_ROOT}/build/${PROJECT_NAME}_build"
