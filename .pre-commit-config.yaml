@@ -19,4 +19,3 @@ repos:
         name: Type check
         description: "Run mypy for static type checking"
         additional_dependencies: [types-requests, pandas-stubs]
-        files: ^src/
