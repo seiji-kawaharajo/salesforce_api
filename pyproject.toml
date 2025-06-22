@@ -44,7 +44,7 @@ type-check = "mypy src/"
 type-check-verbose = "mypy --verbose src/"
 lint = "ruff check src/"
 format = "ruff format src/"
-pre-commit = "pre-commit run --all-files"
+pre-commit-all = "pre-commit run --all-files"
 
 [tool.uv]
 link-mode = "copy"
