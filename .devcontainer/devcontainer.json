@@ -15,6 +15,7 @@
         "ms-python.mypy-type-checker",
         "charliermarsh.ruff",
         "njpwerner.autodocstring",
+        "usernamehw.errorlens",
 
         // ファイル形式・フォーマット
         "esbenp.prettier-vscode",

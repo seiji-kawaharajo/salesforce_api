@@ -44,7 +44,6 @@
     "reportMissingTypeStubs": "none"
   },
   "cursorpyright.analysis.typeCheckingMode": "basic",
-  "dev.containers.copyGitConfig": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit"

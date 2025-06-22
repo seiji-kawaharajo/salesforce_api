@@ -1,3 +1,9 @@
+"""Salesforce API module for Python.
+
+This module provides the main Salesforce connection class and configuration
+management for interacting with Salesforce APIs.
+"""
+
 import json
 from typing import Any
 
@@ -6,6 +12,8 @@ from simple_salesforce.api import Salesforce
 
 
 class SalesforceConnectionSettings(BaseModel):
+    """Salesforce connection settings."""
+
     username: str
     password: SecretStr
     security_token: SecretStr
@@ -20,29 +28,33 @@ class SalesforceConnectionSettings(BaseModel):
 
 
 class Sf(Salesforce):
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
+    """Salesforce connection."""
+
+    def __init__(self: "Sf", *args: Any, **kwargs: Any) -> None:  # noqa: ANN401
+        """Initialize Salesforce connection."""
         super().__init__(*args, **kwargs)
 
     @classmethod
-    def from_env(
-        cls,
-        json_str: str,
-    ) -> "Sf":
+    def from_env(cls: type["Sf"], json_str: str) -> "Sf":
+        """Initialize Salesforce connection from environment variables."""
         if not isinstance(json_str, str) or not json_str.strip():
-            raise ValueError("有効なJSON文字列が提供されていません。")
+            error_msg = "有効なJSON文字列が提供されていません。"
+            raise ValueError(error_msg)
+
         try:
             _raw_config: dict[str, Any] = json.loads(json_str)
         except json.JSONDecodeError as e:
-            raise ValueError(f"提供されたJSON文字列の形式が不正です: {e}") from e
+            error_msg = f"提供されたJSON文字列の形式が不正です: {e}"
+            raise ValueError(error_msg) from e
 
         try:
             parsed_settings = SalesforceConnectionSettings.model_validate(_raw_config)
         except ValidationError as e:
-            raise ValueError(
-                f"Salesforce設定のバリデーションに失敗しました: {e}"
-            ) from e
-        except Exception as e:
-            raise ValueError(f"設定パース中に予期せぬエラーが発生しました: {e}") from e
+            error_msg = f"Salesforce設定のバリデーションに失敗しました: {e}"
+            raise ValueError(error_msg) from e
+        except (ValueError, TypeError) as e:
+            error_msg = f"設定パース中に予期せぬエラーが発生しました: {e}"
+            raise ValueError(error_msg) from e
 
         return cls(
             username=parsed_settings.username,

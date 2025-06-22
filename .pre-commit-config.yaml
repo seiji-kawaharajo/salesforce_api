@@ -11,3 +11,12 @@ repos:
       - id: ruff-format
         name: Ruff format
         description: "Run 'ruff format' for extremely fast Python formatting"
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.16.1
+    hooks:
+      - id: mypy
+        name: Type check
+        description: "Run mypy for static type checking"
+        additional_dependencies: [types-requests, pandas-stubs]
+        args: [--ignore-missing-imports, --exclude, "examples/.*"]
