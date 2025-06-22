@@ -28,6 +28,7 @@ dev-dependencies = [
   "mypy>=1.16.1",
   "pandas-stubs>=2.2.3.250527",
   "types-requests>=2.32.4.20250611",
+  "pre-commit>=4.2.0",
 ]
 
 [tool.hatch.metadata]
@@ -45,7 +46,7 @@ hadolint = "./scripts/run-hadolint.sh"
 link-mode = "copy"
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py312"
 line-length = 88
 select = [
   "E",  # pycodestyle errors

@@ -23,3 +23,7 @@ else
 fi
 
 echo "✅ Post-create setup completed successfully!"
+
+# pre-commitフックの自動インストール
+echo "🔧 Installing pre-commit hooks..."
+rye run pre-commit install
