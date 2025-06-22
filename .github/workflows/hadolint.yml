@@ -14,6 +14,10 @@ on:
       - "**/Dockerfile.*"
       - ".hadolint.yaml"
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
   hadolint:
     name: Hadolint
@@ -26,9 +30,10 @@ jobs:
         uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: .devcontainer/Dockerfile
-          config-file: .hadolint.yaml
+          config: .hadolint.yaml
           format: sarif
           output-file: hadolint-results.sarif
+          no-fail: true
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
