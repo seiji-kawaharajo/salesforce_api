@@ -8,7 +8,9 @@ import logging
 from pathlib import Path
 
 import pandas as pd
+
 from salesforce_api import Sf, SfBulk
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
