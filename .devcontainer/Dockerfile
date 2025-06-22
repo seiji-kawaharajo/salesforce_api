@@ -16,3 +16,5 @@ USER vscode
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
 ENV PATH="/home/vscode/.rye/shims:${PATH}"
+
+# kaetemiru
