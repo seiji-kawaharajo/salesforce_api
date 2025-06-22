@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING
 
 import pandas as pd
 
+
 if TYPE_CHECKING:
     from .salesforce_bulk import SfBulk
 

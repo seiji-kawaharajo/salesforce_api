@@ -9,7 +9,7 @@ dependencies = [
   "simple-salesforce>=1.12.6",
 ]
 readme = "README.md"
-requires-python = ">= 3.13"
+requires-python = ">= 3.12"
 
 [project.scripts]
 hello = "salesforce_api:hello"
@@ -66,7 +66,7 @@ lines-after-imports = 2
 "tests/**/*" = ["B011"]
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.12"
 warn_return_any = true
 warn_unused_configs = true
 warn_unused_ignores = true
