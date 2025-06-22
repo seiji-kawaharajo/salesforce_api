@@ -24,7 +24,6 @@
 
         // Docker・コンテナ
         "ms-azuretools.vscode-docker",
-        "exiasr.hadolint",
         "anysphere.remote-containers",
 
         // UI・テーマ
@@ -37,8 +36,7 @@
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
-    },
-    "ghcr.io/dhoeric/features/hadolint:1": {}
+    }
   },
   "name": "rye project",
   "postCreateCommand": ".devcontainer/post-create.sh",
